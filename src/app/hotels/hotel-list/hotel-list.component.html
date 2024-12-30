@@ -1,0 +1,57 @@
+
+<div class="container">
+  <h2 *ngIf="hotels && hotels.length > 0">{{title}}</h2>
+ <button class="btn btn-primary" (click)="togleIshowBadge()">
+  <span class="material-icons">
+    {{showBadge ? 'visibility_off ': 'visibility '}}
+   </span>
+ <span class="ml-2">{{showBadge ? '  cacher': '  afficher'}} nouveau</span>
+ </button>
+ 
+ <hr>
+ <div class="my-2">
+   <div class="row">
+     <div class="col-md-4">
+<span  >Filtre actue: </span>
+<b class="filtre">{{_hotelFilter}}</b>
+     </div>
+     <div class="col-md-4 form-group">
+<input type="text" class="Form-control" [ngModel]="_hotelFilter" (ngModelChange)="filterChanged($event)">
+     </div>
+   </div>
+ </div>
+ 
+  <div class="row row-cols-1 row-cols-md-3">
+      <div class="col mb-4" *ngFor="let hotel of filteredHotels">
+        <div class="card">
+         <div class="cont">
+          <img src="{{hotel.Image}}" [title]="hotel.nom | uppercase" class="card-img-top" [alt]="hotel.nom">
+         </div>
+          <div class="card-body">
+            <h5 class="card-title">{{hotel.nom | titlecase}} </h5>
+            <b>{{hotel.prix | currency : ' DH ' : 'symbol' :'1.2-2' :'fr' }}</b>
+            <p class="card-text">{{hotel.description}}</p>
+            <div class="d-flex justify-content-between aling-items-baseline">
+                   <app-star-rating [rating]="hotel.rating" ></app-star-rating>
+                   <span class="material-icons bg-primary text-white p-2 rounded-circle btn"
+                   [routerLink]="['/hotels', hotel.id, 'edit']">
+                     edit
+                   </span>
+                   <span class="material-icons bg-info text-white p-2 rounded-circle btn"
+                   [routerLink]="['/hotels', hotel.id]">
+                     keyboard_arrow_right
+                   </span>
+            </div>
+           
+            <ng-container *ngFor="let tag of hotel.tags; let i = index">
+              <ng-container *ngIf="showBadge">
+             <span class="badge badge-pill badge-info" style="background-color: 
+             rgb(7, 230, 192);border-radius: 15px;"  [ngClass]="false ? 'badge-info' : 'badge-pill ml-2 mr-2'" >{{tag}}</span>
+              </ng-container>
+    
+            </ng-container>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+[
+    {
+    "hotelId": 1,
+    "nom":"john",
+    "description": "sjchhbudniojalk uihniijl",
+    "prix":300,
+    "Image": "assets/image/maroc.jpg/",
+    "rating":  3 
+},
+{
+ "hotelId": 2,
+ "nom":"maroc",
+ "description": "sjchhbudniojalk uihniijlk",
+ "prix":150,
+ "Image": "assets/image/GettyImages-889367018.jpg/",
+ "rating":2.5
+},
+{
+ "hotelId": 3,
+ "nom":"kods",
+ "description": "sjchhbudniojalk uihniijlk",
+ "prix":600,
+ "Image": "assets/image/palamoroc.jpg/",
+ "rating":4
+},
+{
+ "hotelId": 4,
+ "nom":"john",
+ "description": "sjchhbudniojalk uihniijlk",
+ "prix":400,
+ "Image": "assets/image/palastin.jpeg/",
+ "rating":3.5
+},
+{
+ "hotelId": 5,
+ "nom":"john",
+ "description": "sjchhbudniojalk uihniijlk",
+ "prix":200,
+ "Image": "assets/image/kodsse.jpg/",
+ "rating": 2
+}]
