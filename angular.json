@@ -35,19 +35,20 @@
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/material-icons/iconfont/material-icons.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/hotelApp/"
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "800kb",
                   "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
+                  "maximumWarning": "5kb",
                   "maximumError": "4kb"
                 }
               ],
@@ -57,7 +58,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/hotelApp/"
             },
             "development": {
               "buildOptimizer": false,
@@ -104,6 +106,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

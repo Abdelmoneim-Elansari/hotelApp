@@ -4,7 +4,7 @@
     "nom":"john",
     "description": "sjchhbudniojalk uihniijl",
     "prix":300,
-    "Image": "assets/image/maroc.jpg/",
+    "Image": "assets/image/maroc.jpg",
     "rating":  3 
 },
 {
@@ -12,7 +12,7 @@
  "nom":"maroc",
  "description": "sjchhbudniojalk uihniijlk",
  "prix":150,
- "Image": "assets/image/GettyImages-889367018.jpg/",
+ "Image": "assets/image/GettyImages-889367018.jpg",
  "rating":2.5
 },
 {
