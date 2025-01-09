@@ -35,7 +35,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/material-icons/iconfont/material-icons.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/hotelApp/"
           },
           "configurations": {
             "production": {
@@ -57,7 +58,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/hotelApp/"
             },
             "development": {
               "buildOptimizer": false,
